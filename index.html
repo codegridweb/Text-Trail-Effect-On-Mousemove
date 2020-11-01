@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>texttrail</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js" integrity="sha512-3WGIRFCuTpZhqYujwLp5RtARPkOy3uRtc3RXB31bJ9/i6VH2C66Z0WBV6gHhdhbUIDKFx8yTkLfEjdQM5Wl+ZQ==" crossorigin="anonymous"></script>
+</head>
+<body>
+   <div class="cursor">
+       <div class="text">codegrid</div>
+       <div class="text">codegrid</div>
+       <div class="text">codegrid</div>
+       <div class="text">codegrid</div>
+       <div class="text"><span>codegrid</span></div>
+   </div>
+   <script>
+        document.addEventListener("mousemove", e => {
+            gsap.to(".text", {
+                x: e.clientX,
+                y: e.clientY,
+                stagger: -0.02
+            });
+        });       
+   </script>
+</body>
+</html>
